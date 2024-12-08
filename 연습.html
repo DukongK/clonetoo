@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+      .m_login {
+        background-color: #4daaf2;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+      }
+      .m_login a {
+        color: #fff;
+      }
+      .m_login span {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .m_login ul {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .m_login i {
+        font-size: 40px;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      .mobile_list {
+        background-color: #fff;
+        padding: 30px 25px;
+        line-height: 50px;
+      }
+      .mobile_list li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0px;
+        cursor: pointer;
+      }
+      .mobile_list p {
+        display: none;
+        padding-left: 15px;
+      }
+      .mobile_list .on {
+        display: block;
+      }
+
+      .mobile_list h2 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .mobile_list .color_on {
+        color: #4daaf2;
+      }
+      .mobile_list span {
+        color: #555;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m_login">
+      <ul>
+        <li><a href="#">로그인</a></li>
+        <li><span>|</span></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa-solid fa-xmark"></i>
+        </li>
+      </ul>
+    </div>
+    <ul class="mobile_list">
+      <li>
+        <h2>
+          브랜드<span><i class="fa-solid fa-chevron-down"></i></span>
+        </h2>
+        <p><a href="#">브랜드 이야기</a></p>
+      </li>
+
+      <li>
+        <h2>
+          제품<span><i class="fa-solid fa-chevron-down"></i></span>
+        </h2>
+        <p><a href="#">디스펜서</a></p>
+      </li>
+
+      <li>
+        <h2>
+          클럽 투오<span><i class="fa-solid fa-chevron-down"></i></span>
+        </h2>
+        <p>제품 이야기</p>
+      </li>
+
+      <li>
+        <h2>
+          이벤트<span><i class="fa-solid fa-chevron-down"></i></span>
+        </h2>
+        <p>제품 이야기</p>
+      </li>
+
+      <li>
+        <h2>
+          고객센터<span><i class="fa-solid fa-chevron-down"></i></span>
+        </h2>
+        <p>제품 이야기</p>
+      </li>
+    </ul>
+  </body>
+  <script>
+    $(function () {
+      $(".mobile_list li").on("click", function () {
+        i = $(this).index();
+        console.log(i);
+
+        $(this).removeClass("on");
+        $(".mobile_list li p").eq(i).toggleClass("on");
+
+        $(this).children("h2").toggleClass("color_on");
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,1762 @@
+/* ---------pc버전------------ */
+@media (min-width: 1200px) {
+  /* == header == */
+  /* menubar list */
+  header {
+    position: relative;
+  }
+  .pcmenubar_list {
+    z-index: 50;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: none;
+  }
+  .listbg {
+    background-color: #fff;
+    padding-bottom: 100px;
+  }
+  .listbg i {
+    font-size: 50px;
+    padding: 20px 20px 0px 0px;
+    cursor: pointer;
+  }
+  .listbg ul:first-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .listbg ul:last-child {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  .listbg ul:last-child h2 {
+    padding-bottom: 30px;
+    font-size: 28px;
+  }
+  .listbg ul:last-child p {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .listbg ul:last-child p a {
+    color: #666;
+    transition: 0.2s;
+  }
+  .listbg ul:last-child p a:hover {
+    color: #4daaf2;
+  }
+
+  header nav ul {
+    display: flex;
+    align-items: center;
+  }
+  header nav ul:last-child {
+    display: flex;
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header nav ul:last-child li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  header nav ul:nth-child(2) li {
+    display: flex;
+    gap: 50px;
+    margin-left: 70px;
+    font-family: "KorailRoundGothicLight";
+  }
+
+  header nav {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    width: 100%;
+  }
+
+  header nav li a {
+    font-size: 23px;
+    color: #fff;
+  }
+
+  header nav ul:last-child a {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  header .scroll img {
+    width: 20px;
+  }
+  /* header window scroll */
+  .windowscroll {
+    display: none;
+    position: fixed;
+    z-index: 3;
+  }
+  .menu_on {
+    background-color: #fff;
+    color: #222;
+  }
+  /* header hover */
+
+  /* 비디오 */
+  header video {
+    position: relative;
+  }
+
+  header iframe {
+    height: 800px;
+  }
+
+  /* 유튜브 검정여백 제거 */
+  .video {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* 스크롤 */
+  header .scroll {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+  }
+  header .scroll h4 {
+    font-size: 14px;
+    color: #444;
+  }
+
+  /* contents */
+  /* == con1 == */
+
+  .con1 {
+    background-image: url(../img/main/bg_sec2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    position: relative;
+  }
+  .con1f {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .con1f > h2 {
+    font-size: 45px;
+    line-height: 55px;
+    font-family: "KorailRoundGothicLight";
+  }
+  .con1f > h2:first-child {
+    color: #50a4e5;
+  }
+  .con1f ul li:first-child img {
+    height: 480px;
+  }
+  /* con1fimg right wave */
+  .wave {
+    background-color: #80c8ff;
+    height: 480px;
+    width: 330px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  /* 물결 애니메이션  3개 필요 나머지는 살짝 투명한거 같음 */
+  .wavelong1 {
+    z-index: 5;
+    background-color: #4daaf2;
+    width: 500px;
+    height: 500px;
+    border-radius: 220px;
+    position: absolute;
+    left: -80px;
+    top: -90px;
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+  }
+
+  .wavelong2 {
+    z-index: 3;
+    background-color: rgba(31, 115, 200, 0.5);
+    width: 520px;
+    height: 520px;
+    border-radius: 230px;
+    position: absolute;
+    left: -80px;
+    top: -100px;
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 13s;
+  }
+  .wavelong3 {
+    z-index: 3;
+    background-color: rgba(75, 165, 255, 0.5);
+    width: 530px;
+    height: 530px;
+    border-radius: 230px;
+    position: absolute;
+    left: -80px;
+    top: -100px;
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 17s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .con1f ul {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px 20px 100px 20px;
+  }
+
+  .borderline {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  .radius1 img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+  }
+  .radius1 h2 {
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .line1 {
+    background-color: #fff;
+    width: 25px;
+    height: 2px;
+    margin: 20px auto;
+  }
+  .radius1 p {
+    color: #fff;
+    width: 100%;
+  }
+  .wavefont {
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wavefont h2 {
+    font-family: "KorailRoundGothicLight";
+  }
+  /* pc con1fontlink */
+  .con1f ul li:first-child {
+    position: relative;
+  }
+  .con1fontlink {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+  }
+  .con1fontlink h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 35px;
+    text-align: left;
+  }
+  .con1fontlink p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  .con1fontlink a {
+    border: 1px solid #222;
+    padding: 12px 35px;
+    border-radius: 50px;
+    float: left;
+    transition: 0.3s;
+  }
+  /* pc con1 hover */
+  .con1fontlink a:hover {
+    background-color: #fff;
+  }
+  .con1f ul li:first-child img {
+    border-radius: 30px;
+  }
+
+  /* pc con2 */
+  .con2 {
+    background-color: #f8f3e9;
+  }
+
+  .con2 img {
+    width: 380px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  .con2 ul {
+    margin: 0px auto;
+    width: 1350px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .con2 h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+  }
+  .con2 .box1 h3 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 20px;
+  }
+  .con2 .con2box h3 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .con2 .con2box p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .con2 span {
+    color: #4daaf2;
+  }
+  .con2 li:first-child a {
+    border: 1px solid #222;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  .con2 li:first-child a:hover {
+    background-color: #fff;
+  }
+
+  .box1 {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .box1 .box1font {
+    font-size: 23px;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+  }
+
+  .maup {
+    padding-top: 500px;
+  }
+
+  /* pc con2 마우스닿으면 효과 */
+  .con2box {
+    cursor: pointer;
+    display: none;
+    background-color: sandybrown;
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  .con2box {
+    color: #fff;
+  }
+  .con2box h3 {
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: normal;
+  }
+  .con2box p {
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  .con2box .plus {
+    border: 1px solid #fff;
+    padding: 12px 15px;
+    border-radius: 100%;
+    color: #fff;
+  }
+
+  /* pc con3 */
+
+  .con3 {
+    background-image: url(../img/main/bg_sec4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+  }
+  .con3ftbotom {
+    margin: 0px auto;
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .con3font h2 {
+    font-family: "KorailRoundGothicLight";
+    margin-top: 150px;
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .con3font {
+    display: flex;
+    justify-content: space-between;
+    display: inline;
+  }
+  .con3font span {
+    color: #4daaf2;
+  }
+
+  .con3font a {
+    align-items: center;
+    border: 1px solid #222;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    height: 100%;
+  }
+  .con3font a:hover {
+    background-color: #fff;
+  }
+  .con3slide {
+    margin-top: 50px;
+    margin-left: 230px;
+  }
+
+  .con3slide .radimg {
+    border-radius: 30px;
+    width: 650px;
+    height: 430px;
+  }
+
+  .con3slide .blueimg {
+    width: 70px;
+    height: 70px;
+    display: block;
+  }
+  .bimg {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 20px;
+
+    animation-name: leftmove;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .bx3 {
+    display: inline-block;
+    position: relative;
+
+    animation-name: leftmove;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  .con3box {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .con3box img {
+    width: 651px;
+    height: 430px;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  .con3box p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-family: "KorailRoundGothicLight";
+  }
+  .con3slide ul {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+  }
+
+  /* pc 옆으로 이동 애니메이션 */
+  @keyframes leftmove {
+    0% {
+      transform: translateX(0px);
+    }
+
+    45%,
+    70%,
+    55%,
+    90%,
+    95%,
+    100% {
+      transform: translateX(-650px);
+    }
+  }
+  .bx3,
+  .bimg {
+    animation-delay: 3s;
+  }
+  /* con4 */
+
+  .con4icon ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    width: 1350px;
+  }
+  .con4 {
+    background-color: #eee;
+    height: 100%;
+  }
+  .con4 > h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 45px;
+    text-align: center;
+    line-height: 200px;
+  }
+  .con4icon h3 {
+    color: #777;
+  }
+  .con4icon img {
+    width: 70px;
+    align-items: center;
+    transition: 0.4s;
+  }
+
+  .con4icon li {
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+  /* pc con4 hover */
+  .con4icon li:hover img {
+    transform: scale(1.3);
+  }
+
+  .centerbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: 70px;
+  }
+
+  /* pc con4 고객센터 */
+
+  .cus ul {
+    display: flex;
+    gap: 30px;
+  }
+  .customer {
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    background-color: #64ade6;
+  }
+  .con4wrap {
+    margin: 0px auto;
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cus h2 {
+    font-size: 50px;
+    margin-top: 5px;
+  }
+  .cus ul li p {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+  .cutfont {
+    font-size: 12px;
+  }
+  .con4line {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 1px;
+    height: 80px;
+  }
+
+  /* con4 upbutton */
+  .con4icon {
+    position: relative;
+  }
+  .con4 .upbutton {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    position: absolute;
+    right: 50px;
+    bottom: 490px;
+    position: fixed;
+  }
+  .con4 .upbutton i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* footer */
+  footer {
+    margin: 50px auto;
+    width: 1350px;
+    position: relative;
+    /* margin: 50px 100px; */
+  }
+  /* fo1 */
+  .fo1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fo1 > ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .fo1 ul li:first-child img {
+    margin-right: 20px;
+  }
+  .fo1 .corg {
+    color: #ccc;
+  }
+  /* fo2 */
+  .fo2 {
+    font-size: 14.5px;
+    color: #777;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    line-height: 30px;
+  }
+  .fo2 span {
+    color: #ccc;
+  }
+  .footericon {
+    display: flex;
+    gap: 20px;
+  }
+  .footericon li {
+    background-color: #ccc;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+  .footericon i {
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+  }
+  /* family 패밀리사이트 버튼 */
+
+  .fam1 ul {
+    cursor: pointer;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    /* margin-bottom: 15px; */
+    width: 300px;
+  }
+  .famline {
+    margin-top: 15px;
+    width: 300px;
+    height: 1px;
+    background-color: #ddd;
+  }
+
+  /* fam2 */
+
+  .fam2 {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+    bottom: 129px;
+    height: 500px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  .fam2 > ul {
+    width: 100%;
+  }
+
+  .fam2 {
+    overflow: hidden;
+    padding: 10px 0px;
+  }
+
+  .fam2 ul:first-child > li > a {
+    transition: 0.1s;
+    color: #666;
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+  }
+  /* hover */
+
+  .fam2 ul:first-child > li > a:hover {
+    background-color: #eee;
+    color: #4daaf2;
+    font-weight: bold;
+  }
+
+  .famfont {
+    cursor: default;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    position: absolute;
+    left: 15.3px;
+    bottom: 15px;
+    /* margin-top: 25px; */
+  }
+  .famfont p {
+    color: #444;
+  }
+  .fam1 ul p {
+    color: #444;
+  }
+  /* 모바일 버전 제거 */
+  .mologo {
+    display: none;
+  }
+  .mo_menu_icon img {
+    display: none;
+  }
+  .moscroll_logo {
+    display: none;
+  }
+  .mocon1img {
+    display: none;
+  }
+  .mowavefont {
+    display: none;
+  }
+  .con2mo {
+    display: none;
+  }
+  .moboxwave {
+    display: none;
+  }
+  .mocon3 {
+    display: none;
+  }
+  .con4mo {
+    display: none;
+  }
+  .con4moline {
+    display: none;
+  }
+  .cus4mo {
+    display: none;
+  }
+  .mofo1 {
+    display: none;
+  }
+  .momenu2 {
+    display: none;
+  }
+  .mo_menu_list_wrap {
+    display: none;
+  }
+  .mobile_list {
+    display: none;
+  }
+  .m_login {
+    display: none;
+  }
+}
+
+/* ---------모바일 버전------------ */
+@media (max-width: 1200px) {
+  /* pc버전 제거 */
+  iframe {
+    display: none;
+  }
+  .pclogo {
+    display: none;
+  }
+  .pc_menu {
+    display: none;
+  }
+  .pcmenubar_list {
+    display: none;
+  }
+  .listbg {
+    display: none;
+  }
+
+  /* 모바일 헤더 메뉴 나오기 */
+
+  .mo_menu_list_wrap {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    /* display: none; */
+    margin-left: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .m_login {
+    background-color: #4daaf2;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+  }
+  .m_login a {
+    color: #fff;
+  }
+  .m_login span {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .m_login ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .m_login i {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .mobile_list {
+    background-color: #fff;
+    padding: 30px 25px;
+    line-height: 50px;
+    height: 100%;
+  }
+  .mobile_list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+  .mobile_list p {
+    display: none;
+    padding-left: 15px;
+  }
+  .mobile_list .on {
+    display: block;
+  }
+
+  .mobile_list h2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile_list .color_on {
+    color: #4daaf2;
+  }
+  .mobile_list span {
+    color: #555;
+    font-size: 18px;
+  }
+
+  .rightarrow {
+    position: absolute;
+    right: 26px;
+    top: 130px;
+    display: none;
+  }
+  /* .mobile_list li p span:first-child {
+    float: right;
+    width: 200px;
+  } */
+
+  .mobile_list li a {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    text-align: left;
+  }
+
+  /* == header == */
+  .mologo {
+    width: 50%;
+  }
+
+  header nav ul {
+    display: flex;
+    align-items: center;
+  }
+  /* header 로고 아이콘 none */
+  /* header nav ul:last-child {
+    display: flex;
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  } */
+
+  /* header nav ul:last-child li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  } */
+
+  header nav ul:nth-child(2) li {
+    display: flex;
+    gap: 50px;
+    margin-left: 70px;
+    font-family: "KorailRoundGothicLight";
+    display: none;
+  }
+
+  header nav {
+    position: relative;
+    z-index: 20;
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .mo_menu_icon img {
+    width: 50%;
+    cursor: pointer;
+  }
+
+  header > li a {
+    font-size: 23px;
+    color: #fff;
+  }
+
+  header > ul:last-child a {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  header .scroll img {
+    width: 20px;
+  }
+  /* header window scroll */
+  .windowscroll {
+    display: none;
+    position: fixed;
+    z-index: 20;
+  }
+  /* none */
+  .pcscroll_logo {
+    display: none;
+  }
+  .pcscroll_login {
+    display: none;
+  }
+  .moscroll_logo {
+    width: 50%;
+  }
+
+  .menu_on {
+    background-color: #fff;
+    color: #222;
+  }
+
+  /* 스크롤 */
+  header .scroll {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+  }
+  header .scroll h4 {
+    font-size: 14px;
+    color: #444;
+  }
+  /* 모바일 헤더 이미지 */
+
+  /* 이미지 전환 주기 */
+  .mo_header_img {
+    background-image: url(../img/mobile/m_img_visual_slider_1.jpg);
+    width: 100%;
+    height: 950px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: moheaderimg;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+  .mo_header_img2 {
+    animation-delay: 10s;
+  }
+  /* 움직임 설정 */
+  @keyframes moheaderimg {
+    10%,
+    20%,
+    30%,
+    40% {
+      background-image: url(../img/mobile/m_img_visual_slider_1.jpg);
+    }
+    55%,
+    70%,
+    60%,
+    90%,
+    95% {
+      background-image: url(../img/mobile/m_img_visual_slider_2.jpg);
+    }
+  }
+
+  /* contents */
+  /* == con1 == */
+
+  .con1 {
+    background-image: url(../img/mobile/m_bg_sec2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .con1f {
+    width: 100%;
+
+    /* position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: center;
+    padding-top: 50px;
+  }
+  /* con1 pc이미지 none */
+  .pccon1img {
+    display: none;
+  }
+
+  .con1f > h2 {
+    font-size: 35px;
+    line-height: 50px;
+    font-family: "KorailRoundGothicLight";
+  }
+  .con1f > h2:first-child {
+    color: #50a4e5;
+  }
+
+  .con1f ul li:first-child img {
+    width: 100%;
+  }
+  /* con1fimg right wave */
+  .wave {
+    background-color: #80c8ff;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* 물결 애니메이션  3개 필요 나머지는 살짝 투명한거 같음 */
+  .wavelong1 {
+    z-index: 5;
+    background-color: #4daaf2;
+    width: 100%;
+    height: 370%;
+    border-radius: 1350px;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    /* transform: translate(-50%, -50%); */
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+  }
+
+  .wavelong2 {
+    z-index: 3;
+    background-color: rgba(31, 115, 200, 0.5);
+    width: 100%;
+    height: 360%;
+    border-radius: 1340px;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 13s;
+  }
+  .wavelong3 {
+    z-index: 3;
+    background-color: rgba(75, 165, 255, 0.5);
+    width: 100%;
+    height: 350%;
+    border-radius: 1320px;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+
+    animation-name: wave;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 17s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .con1f ul {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    flex-direction: column;
+    padding: 20px 20px 50px 20px;
+  }
+
+  .borderline {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .radius1 img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .radius1 h2 {
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .line1 {
+    background-color: #fff;
+    width: 25px;
+    height: 2px;
+    margin: 20px auto;
+    display: none;
+  }
+  .pcwavefont {
+    display: none;
+  }
+  .radius1 p {
+    color: #fff;
+    width: 100%;
+  }
+  .wavefontmo {
+    z-index: 10;
+    position: absolute;
+    left: 80%;
+    top: 30%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  .wavefontmo h2 {
+    font-weight: normal;
+  }
+  .wavefontmo p {
+    line-height: 23px;
+  }
+
+  .wavefontmo ul li:first-child {
+    z-index: 10;
+    position: absolute;
+    left: -80px;
+    bottom: 20px;
+  }
+  .moboxwave {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+
+  .wavefont {
+    display: none;
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+
+  .wavefont h2 {
+    font-family: "KorailRoundGothicLight";
+  }
+  /* con1fontlink */
+  /* .con1f ul li:first-child {
+    position: relative;
+  } */
+
+  .mo_fontlinkbox {
+    position: relative;
+  }
+  .mocon1img {
+    border-radius: 30px;
+  }
+
+  .con1fontlink {
+    position: absolute;
+    left: 50px;
+    bottom: 120px;
+  }
+  .con1fontlink h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 30px;
+    text-align: left;
+  }
+  .con1fontlink p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  .con1fontlink a {
+    border: 1px solid #222;
+    padding: 10px 20px;
+    border-radius: 50px;
+    float: left;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+  /* con1 hover */
+  /* .con1fontlink a:hover {
+    background-color: #fff;
+  }
+  .con1f ul li:first-child img {
+    border-radius: 30px;
+  } */
+
+  /*  con2 */
+
+  .con2 {
+    /* margin-top: 50px; */
+    background-color: #f8f3e9;
+    display: none;
+  }
+  .con2mo {
+    background-color: #f8f3e9;
+    padding-bottom: 50px;
+  }
+
+  .con2mo img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  .con2mo ul {
+    margin: 0px auto;
+    /* width: 1350px; */
+    /* display: flex; */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .con2mo h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    width: 100%;
+    padding-top: 150px;
+  }
+  .con2mo .box1 h3 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 20px;
+  }
+
+  .con2mo .con2box p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .con2mo span {
+    color: #4daaf2;
+  }
+  .con2mo li:first-child a {
+    margin-top: 20px;
+    border: 1px solid #222;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 100px;
+  }
+
+  .box1 {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .box1 .box1font {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: left;
+    font-size: 16px !important;
+    padding: 0px 30px;
+    line-height: 30px;
+    width: 250px;
+  }
+
+  /*  con3 */
+
+  .con3 {
+    background-image: url(../img/mobile/m_bg_sec4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .con3ftbotom {
+    /* margin: 0px auto; */
+    /* width: 1350px; */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .con3font h2 {
+    font-family: "KorailRoundGothicLight";
+    /* margin-top: 150px; */
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+  }
+  .con3font {
+    display: flex;
+    justify-content: space-between;
+    display: inline;
+  }
+  .con3font span {
+    color: #4daaf2;
+  }
+
+  .con3font a {
+    margin: 0px auto;
+    align-items: center;
+    border: 1px solid #222;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 50px;
+    transition: 0.3s;
+    height: 100%;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  /* con3 none */
+  .mocon3 {
+    padding-top: 40px;
+  }
+  .con3slide {
+    display: none;
+  }
+  /* 이미지 부모 */
+  .mo3box1 {
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* 이미지 포지션  */
+  /* 여기서도 너비 높이값 100% 맞추기 */
+  .txtbox {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  /* 이미지 너비,높이 값 100% 맞추기 */
+  .txtbox img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mo3box1 p {
+    width: 85%;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    line-height: 35px;
+    color: #555;
+  }
+
+  /* 이미지 */
+  .nameimg {
+    cursor: pointer;
+  }
+  .mo3box1 img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
+  /* con3 name */
+  .nameimg img {
+    width: 50px;
+    height: 50px;
+  }
+  .nameimg ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 40px;
+  }
+  /* con3 버튼 */
+  .namebutton ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .namebutton li {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #4daaf2;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .namebutton i {
+    font-size: 23px;
+    color: #4daaf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* con4 */
+
+  /* none */
+  .con4icon {
+    display: none;
+  }
+  .customer {
+    display: none;
+  }
+
+  .con4 {
+    background-color: #eee;
+  }
+  .con4 > h2 {
+    font-family: "KorailRoundGothicLight";
+    font-size: 35px;
+    text-align: center;
+    line-height: 200px;
+  }
+
+  /* con4mo */
+  .con4mo {
+    padding-bottom: 30px;
+  }
+  .con4mo ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .con4mo ul li {
+    cursor: pointer;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .con4mo li:hover img {
+    transform: scale(1.2);
+  }
+
+  .con4mo img {
+    width: 45%;
+    transition: 0.3s;
+  }
+  .con4moimg {
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+  }
+  .con4moimg h3 {
+    color: #666;
+  }
+
+  /* pc con4 고객센터  none */
+  .con4wrap {
+    display: none;
+    padding: 0px 50px;
+  }
+  /* 모바일 고객센터 */
+  .cus4mo {
+    background-color: #64ade6;
+  }
+  .cus4mo ul {
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px 70px;
+    width: 510px;
+    margin: 0px auto;
+  }
+
+  .cus4mo h3 {
+    text-align: right;
+    margin-bottom: 5px;
+  }
+  .cus4mo h2 {
+    font-size: 30px;
+  }
+  .cus4mo p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .line4 {
+    width: 400px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0px auto;
+  }
+  /* .cus4mo ul:first-child li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  } */
+
+  /* con4 upbutton */
+  .con4mo {
+    position: relative;
+  }
+  .con4mo .upbutton {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    position: fixed;
+  }
+  .con4mo .upbutton i {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* footer ******************/
+  /* footer none */
+  .fo1 {
+    display: none;
+  }
+  .fo2 {
+    display: none;
+  }
+
+  /* 모바일 footer */
+
+  .mofambbox > ul {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 12px;
+    width: 450px;
+    margin: 0px auto;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 20px 10px 20px;
+  }
+
+  .mofo1 > ul:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 30px;
+    /* margin-top: 35px; */
+  }
+
+  .mofo1 ul:nth-child(2) {
+    padding-top: 35px;
+  }
+  .iconr {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .mofambutton {
+    position: relative;
+
+    width: 450px;
+    margin: 0px auto;
+  }
+  .mofamboxbutton > ul {
+    z-index: 5;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+  }
+
+  .mofamboxbutton ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+  }
+
+  .corg {
+    color: #ccc;
+  }
+
+  .mofo1 > ul span {
+    color: #ccc;
+  }
+  .mofo1 > ul:nth-child(3) p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  /* 푸터 아이콘 */
+  .mofo1 > ul:nth-child(4) {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+  }
+  .mofootericon li {
+    background-color: #ccc;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .mofootericon i {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+  }
+}
